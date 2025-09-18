@@ -1,0 +1,236 @@
+/* =========================================
+   Base & Tokens (shared)
+   ========================================= */
+:root {
+  --text: #222;
+  --muted: #666;
+  --brand: #0a3d91;
+  --brand-2: #e5f0ff;
+  --border: #ccc;
+  --accent: #fff6cc;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 20px; /* page edge breathing room */
+}
+
+header { text-align: center; }
+hr { border: none; height: 1px; background: var(--border); margin: 20px 0; }
+section { margin-bottom: 32px; } /* shared spacing */
+
+
+/* =========================================
+   Lesson 3 — CSS Styling Tasks (A–I)
+   (No transitions here; effects are instant)
+   ========================================= */
+
+/* Headings & text */
+h1 {
+  text-align: center;
+  margin: 0 0 32px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.15);
+}
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 24px 0 12px;
+}
+p { text-align: justify; }
+
+/* Navigation (instant hover change in L3) */
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--brand);
+  padding: 4px 6px;
+}
+nav a:hover,
+nav a:focus {
+  color: #9C9; /* Bright green for visibility, use #062a63 for nicer color */
+  text-decoration: underline;
+}
+
+/* Buttons (instant hover change in L3) */
+.btn {
+  display: inline-block;
+  background: var(--brand-2);
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  padding: 10px 20px;     /* Lesson 3 padding task */
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.btn:hover { background: #dce9ff; } /* instant (no transition in L3) */
+
+#large-btn {
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;           /* preserve aspect ratio */
+  border: 2px solid var(--border);
+  display: inline-block;
+}
+figure { margin: 16px auto; text-align: center; }
+figcaption { color: var(--muted); font-size: .9rem; }
+
+/* Lists */
+ul { padding-left: 1.2rem; }
+ul li { margin-bottom: 5px; }
+ul ul { list-style-type: square; }
+
+/* Tables */
+table {
+  width: 100%;
+  max-width: 640px;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 10px;
+  text-align: left;
+}
+thead th {
+  background: var(--accent);
+  font-weight: bold;
+}
+tbody tr:nth-child(even) { background: #fafafa; }
+
+/* Forms (focus style present, but no transition in L3) */
+form { max-width: 480px; }
+label { display: inline-block; margin: 8px 0 4px; }
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+  margin-bottom: 10px;
+}
+textarea { min-height: 120px; resize: vertical; }
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px dashed green;   /* focus style (instant) */
+  background: #fbfffb;
+}
+
+/* Optional card wrapper */
+.card {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+/* Base border & padding around main content */
+main {
+  border: 2px solid darkblue;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* External link indicator (extra) */
+a[href^="http"]::after {
+  content: " ↗";
+  font-size: .9em;
+  color: var(--muted);
+}
+
+
+/* =========================================
+   Lesson 4 — Box Model, Floats, Positioning, Transitions
+   (Adds floats, positioning, and transitions only)
+   ========================================= */
+
+/* Float image with wrap + spacing */
+.float-left {
+  float: left;
+  margin: 0 10px 10px 0;
+  border: 2px solid #0aa;
+}
+
+/* Float grid */
+.float-grid .float-box {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  background: #cfeaff;
+  border: 1px solid #5ba2f2;
+  display: grid;
+  place-items: center;
+}
+/* Clearfix */
+.clearfix::after { content: ""; display: block; clear: both; }
+
+/* Positioning — Fixed “Back to Top” */
+#to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+}
+
+/* Positioning — Absolute label demo */
+.table-wrap { position: relative; }
+.table-wrap .label {
+  position: absolute;
+  top: -10px; right: -10px;
+  background: #222; color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+/* Positioning — Sticky header on contact page */
+body.page-contact header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 500;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ------------------------
+   Transitions (L4 only)
+   ------------------------ */
+
+/* F-1: Smooth color change for nav links (adds animation to L3 effect) */
+nav a { transition: color .3s ease; }
+
+/* F-2: Float boxes scale on hover (adds animation; hover effect lives here) */
+.float-grid .float-box { transition: transform .2s ease-in-out; }
+.float-grid .float-box:hover { transform: scale(1.05); }
+
+/* F-3: Submit button smooth background/color (adds animation to L3 button) */
+form button[type="submit"] {
+  background: #e6f7ef;
+  border: 1px solid #0b7a43;
+  color: #0b7a43;
+  transition: background-color .25s ease, color .25s ease;
+}
+form button[type="submit"]:hover {
+  background: #daf3e8;
+  color: #085d33;
+}

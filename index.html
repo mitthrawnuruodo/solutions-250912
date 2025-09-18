@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Lessons 3-4 Solution</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>
+        This site demonstrates Lesson 3 and 4 topics:
+        <strong>borders</strong>, <em>margins</em>, paddings, images, lists,
+        tables, forms, buttons, text styling, floats, positioning and transitions.
+        Water is H<sub>2</sub>O and 2<sup>10</sup>=1024.
+        <abbr title="Cascading Style Sheets">CSS</abbr> is our style language.
+      </p>
+    </section>
+
+    <section>
+      <h2>My Interests</h2>
+      <ul>
+        <li>Programming
+          <ul>
+            <li>JavaScript</li>
+            <li>HTML &amp; CSS</li>
+          </ul>
+        </li>
+        <li>Coffee</li>
+        <li>Reading</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Image Float Example</h2>
+      <img src="https://cataas.com/cat?width=150&height=100" alt="Cat" class="float-left">
+      <p>
+        This image is floated left; the text wraps around it. The image has a margin so text does not touch it.
+        Inspect in DevTools to see the box model.
+      </p>
+      <p>
+        After floated content we clear the flow to avoid overlap with subsequent sections.
+      </p>
+      <div class="clearfix"></div>
+    </section>
+
+    <section>
+      <h2>Buttons</h2>
+      <p>
+        <button class="btn">Default Button</button>
+        <button class="btn">Another Button</button>
+        <button class="btn" id="large-btn" title="Larger button (ID styled)">Larger Button</button>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p><small>&copy; 2025 My Website</small></p>
+  </footer>
+
+  <!-- Fixed Back to Top button -->
+  <a href="#top" id="to-top" class="btn">Top</a>
+</body>
+</html>

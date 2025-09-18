@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Lessons 3-4 Solution</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <header>
+    <h1>About This Project</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Optional card wrapper -->
+    <div class="card">
+      <section>
+        <h2>What We’re Practicing</h2>
+        <p>
+          Box model (borders, margins, padding), floats, positioning, and transitions,
+          plus Lesson 3 basics like lists, images, tables, and forms.
+        </p>
+      </section>
+
+      <section>
+        <h2>Our Mascot</h2>
+        <figure>
+          <img
+            src="https://cataas.com/cat?width=300&height=200"
+            alt="A placeholder cat mascot"
+            width="300"
+            height="200"
+            title="Cataas placeholder image">
+          <figcaption><small>Figure: Our friendly (placeholder) mascot.</small></figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>What We’ve Learned (Table)</h2>
+        <div class="table-wrap">
+          <span class="label">Table 1</span>
+          <table>
+            <thead>
+              <tr>
+                <th>Topic</th>
+                <th>Example Tag/Rule</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Structure</td>
+                <td><code>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</code></td>
+                <td>Semantic layout improves clarity</td>
+              </tr>
+              <tr>
+                <td>Text</td>
+                <td><code>&lt;strong&gt;, &lt;em&gt;, &lt;mark&gt;</code></td>
+                <td>Convey meaning, not only style</td>
+              </tr>
+              <tr>
+                <td>Images</td>
+                <td><code>&lt;img&gt; + &lt;figure&gt;/&lt;figcaption&gt;</code></td>
+                <td>Always include descriptive <code>alt</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Float Grid</h2>
+        <div class="float-grid">
+          <div class="float-box">1</div>
+          <div class="float-box">2</div>
+          <div class="float-box">3</div>
+        </div>
+        <p class="clearfix"></p>
+        <p>Boxes float left, wrap if needed, and scale slightly on hover.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <hr>
+    <p><small>&copy; 2025 My Website</small></p>
+  </footer>
+
+  <a href="#top" id="to-top" class="btn">Top</a>
+</body>
+</html>

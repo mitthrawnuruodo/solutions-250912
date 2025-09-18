@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Lessons 3-4 Solution</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top" class="page-contact">
+  <header>
+    <h1>Contact</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Send a Message</h2>
+      <form action="" method="post">
+        <p>
+          <label for="name">Name</label><br>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+        </p>
+
+        <p>
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        </p>
+
+        <p>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" placeholder="Write your message" rows="5" required></textarea>
+        </p>
+
+        <p>
+          <button type="submit" class="btn" title="Send your message">Send</button>
+          <button type="reset" class="btn" title="Clear the form">Clear</button>
+        </p>
+
+        <p><small>
+          Note: This demo form doesn’t submit anywhere (no action URL). Use the buttons to see submit/reset behavior.
+        </small></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Formatting Example</h2>
+      <p>
+        Please read the <strong>guidelines</strong> and <em>be concise</em>.
+        Important bits are <mark>highlighted</mark>. Water is H<sub>2</sub>O,
+        and 5<sup>2</sup>=25. Abbrev: <abbr title="Cascading Style Sheets">CSS</abbr>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p><small>&copy; 2025 My Website</small></p>
+  </footer>
+
+  <a href="#top" id="to-top" class="btn">Top</a>
+</body>
+</html>
